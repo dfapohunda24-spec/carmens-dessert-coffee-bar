@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carmen’s Specialty Dessert & Coffee Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Carmen’s Specialty Dessert & Coffee Bar</h1>
+    <nav>
+      <button onclick="navigate('home')">Home</button>
+      <button onclick="navigate('menu')">Menu</button>
+      <button onclick="navigate('order')">Order</button>
+      <button onclick="navigate('about')">About</button>
+      <button onclick="navigate('contact')">Contact</button>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="home">
+      <h2>Welcome!</h2>
+      <p>Explore our handcrafted desserts and artisan coffee. Order easily from your mobile or desktop!</p>
+    </section>
+
+    <section id="menu" class="hidden">
+      <h2>Our Menu</h2>
+      <div class="menu-grid">
+        <button class="menu-item">Mocha Delight</button>
+        <button class="menu-item">Vanilla Cheesecake</button>
+        <button class="menu-item">Espresso Tiramisu</button>
+        <button class="menu-item">Caramel Latte</button>
+        <button class="menu-item">Chocolate Croissant</button>
+        <button class="menu-item">Matcha Cupcake</button>
+      </div>
+    </section>
+
+    <section id="order" class="hidden">
+      <h2>Place Your Order</h2>
+      <p>Select items from the menu and proceed to checkout.</p>
+      <button onclick="alert('Order simulation coming soon!')">Simulate Order</button>
+    </section>
+
+    <section id="about" class="hidden">
+      <h2>About Us</h2>
+      <p>Carmen’s Specialty Dessert & Coffee Bar brings a taste of artisan baking and specialty coffee to your fingertips.</p>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Contact Us</h2>
+      <p>Email: hello@carmensdesserts.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Carmen’s Specialty Dessert & Coffee Bar</p>
+  </footer>
+
+  <script>
+    function navigate(sectionId) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
